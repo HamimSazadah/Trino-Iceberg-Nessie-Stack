@@ -70,6 +70,9 @@ It is suitable for:
 - RBAC (Role-Based Access Control) is limited in the Community Edition
 - Advanced governance features require Enterprise Edition
 
+## Architecture
+![Diagram](img/diagram.png)
+
 ## Services Endpoint
 | Service | URL | Function | Username | Password |
 | ------------- | ------------------------------------------------ | ---------------------------- | -------- | ----------- |
