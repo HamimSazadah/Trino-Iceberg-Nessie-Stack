@@ -45,6 +45,23 @@ It is suitable for:
 | **Maintenance** | High (complex) | Lower | Hadoop is operationally heavy |
 | **Latency** | High (batch) | Low (interactive) | Real-time querying capability |
 
+## Hive Metastore vs Nessie (Deep Comparison)
+| Aspect | Hive Metastore | Apache Nessie |
+| ---------------------------------------- | ----------------------------------- | ------------------------------------- |
+| **Type** | Traditional metadata catalog | Versioned metadata catalog |
+| **Architecture** | Centralized service backed by RDBMS | Git-like versioned catalog |
+| **Versioning** | ❌ Not supported | ✅ Supported (branches, tags, commits) |
+| **Data Time Travel** | Limited (depends on table format) | Native support via versioning |
+| **Schema Evolution Tracking** | Basic | Advanced (tracked per commit) |
+| **Rollback Capability** | ❌ Manual | ✅ Built-in (checkout previous commit) |
+| **Branching** | ❌ No | ✅ Yes (like Git branches) |
+| **Multi-Environment (dev/staging/prod)** | Hard to manage | Easy with branching |
+| **Concurrency Control** | Limited | Optimistic concurrency control |
+| **Integration with Iceberg** | Supported | Native & recommended |
+| **Audit / History** | Minimal | Full commit history |
+| **Use Case** | Traditional Hive/Spark workloads | Data Lakehouse with version control |
+| **Complexity** | Simpler | Slightly more complex but powerful |
+
 ## Known Limitations
 ### Trino
 - Requires predefined catalog configurations in property files
